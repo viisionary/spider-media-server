@@ -1,13 +1,15 @@
 const NodeMediaServer = require("node-media-server");
 
 const config = {
-  // rtmp: {
-  //   port: 1935,
-  //   chunk_size: 60000,
-  //   gop_cache: true,
-  //   ping: 30,
-  //   ping_timeout: 60
-  // },
+  // 推流服务
+  rtmp: {
+    port: 1935,
+    chunk_size: 60000,
+    gop_cache: true,
+    ping: 30,
+    ping_timeout: 60
+  },
+  // 拉流
   http: {
     port: process.env.PORT || 8000,
     allow_origin: "*"
